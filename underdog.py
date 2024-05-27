@@ -15,11 +15,9 @@ st.image("images/arrow.png", width=30)
 st.write('''Next (still in Chrome) go to View->Developer->JavaScript Console (or hit command+option+j on Mac) and then run `copy(document.querySelector('html').outerHTML)` which will copy the html to your clipboard.
 ''')
 
-st.write("Paste the html below.  Hit command+return on Mac when you're done.")
+st.write("Paste the html below (the text should contain all the data and should be very long).  Hit command+return on Mac when you're done.")
 
-html = st.text_area('Paste the html here', 
-     '''Make sure this is the computed html.  (The html code should contain all the data.  The text should be very long.)
-     ''')
+html = st.text_area('Paste the html here')
 
 soup = BeautifulSoup(html, "html.parser")
 
